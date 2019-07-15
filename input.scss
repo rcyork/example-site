@@ -1,6 +1,10 @@
-@import "_reset";
-@import "_hamburger";
-@import "_colors";
+@import "/css/_reset";
+@import "/css/_colors";
+@import "/css/_hamburger";
+@import "/css/_hero";
+@import "/css/_masonry";
+@import "/css/_grid";
+@import "/css/_queries";
 
 *,
 *:before,
@@ -16,11 +20,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-// .app {
-//   height: max-content;
-//   overflow-y: scroll;
-// }
 
 .container {
   padding-left: 1rem;
@@ -79,79 +78,6 @@ a {
   transition: transform 0.35s ease-in-out;
 }
 
-.hero {
-  height: 400px;
-  overflow: hidden;
-  color: white;
-  object-fit: cover;
-  background-size: cover;
-  position: relative;
-  text-align: center;
-
-  .hero__bg {
-    transform: scale(1.1);
-    background-image: url("hero.jpg");
-    background-size: cover;
-    filter: blur(5px);
-    height: 100%;
-    background-position: center center;
-  }
-}
-
-.hero__content {
-  padding: 1rem;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  align-content: center;
-}
-
-.hero__title {
-  font-family: "Permanent Marker";
-  font-size: 5rem;
-  margin-bottom: 1rem;
-}
-
-.hero__subtitle {
-  text-transform: uppercase;
-  font-family: "Amatic SC";
-  font-size: 2rem;
-}
-
-.masonry {
-  overflow: hidden; // prevent white 'border' on hero from blur overlow trick
-  padding: 2rem 1rem 3rem;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  max-width: max-content;
-
-  .card {
-    background: $light__white;
-    margin-bottom: 1rem;
-  }
-
-  .card::last-child {
-    margin-bottom: 0;
-  }
-
-  .card__title {
-    font-family: "Roboto Mono";
-  }
-
-  .card__text {
-    font-family: monospace;
-    font-size: 1.25rem;
-  }
-}
-
-.masonry__title {
-  color: $brown;
-}
-
 .card {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -172,45 +98,6 @@ a {
 
 .card__text {
   line-height: 1.5rem;
-}
-
-.grid {
-  background: $brown;
-  padding: 2rem 1rem;
-
-  .cards {
-    display: grid;
-    grid-gap: 1rem;
-  }
-
-  .card {
-    background: $cream;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .card:hover {
-    transform: scale(1.01);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  }
-
-  .icon {
-    font-size: 4rem;
-    margin: auto;
-    margin-bottom: 2rem;
-  }
-
-  .card__title {
-    font-family: monospace;
-  }
-
-  .card__text {
-    font-family: "Roboto Mono";
-  }
-}
-
-.grid__title {
-  color: $cream;
 }
 
 footer {
@@ -243,120 +130,4 @@ footer {
 
 .copyright {
   color: $white;
-}
-
-@media all and (min-width: 700px) {
-  .grid {
-    .cards {
-      grid-template-columns: 1fr 1fr;
-    }
-    .card {
-      height: 100%;
-    }
-  }
-
-  .masonry .cards {
-    display: flex;
-    flex-flow: column wrap;
-    max-height: 1000px;
-    margin-left: -1rem;
-
-    .card {
-      margin: 0 0 1rem 1rem; /* Some gutter */
-      max-width: 48%;
-    }
-  }
-}
-
-@media all and (min-width: 900px) {
-  .container {
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-
-  .sectionHeading {
-    font-size: 4rem;
-    margin-bottom: 3rem;
-  }
-
-  .nav {
-    grid-template-columns: max-content max-content;
-    justify-content: space-between;
-  }
-
-  .nav__hamburger {
-    display: none;
-  }
-
-  .homeLogo {
-    margin-right: 1rem;
-  }
-
-  .nav__items {
-    grid-template-columns: repeat(5, max-content);
-    position: initial;
-    background-color: transparent;
-    grid-gap: 2rem;
-    justify-content: space-around;
-    padding: 0;
-
-    a {
-      color: $white;
-      font-size: 1.5rem;
-      width: max-content;
-    }
-
-    a:hover {
-      transform: scale(1.05);
-      color: $orange;
-    }
-  }
-
-  .grid {
-    .cards {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-
-  .masonry .cards {
-    max-height: 1010px;
-
-    .card {
-      max-width: 31%;
-    }
-  }
-}
-
-@media all and (min-width: 1260px) {
-  .masonry,
-  .grid {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .sectionHeading {
-    margin-bottom: 4rem;
-  }
-
-  .card__title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .card__text {
-    font-size: 1.25rem;
-  }
-
-  .container {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .masonry .cards {
-    max-height: 850px;
-
-    .card {
-      max-width: 23%;
-    }
-  }
 }

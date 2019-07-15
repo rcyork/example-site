@@ -1,0 +1,38 @@
+.grid {
+  background: $brown;
+  padding: 2rem 1rem;
+
+  .cards {
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  .card {
+    background: $cream;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .icon {
+    font-size: 4rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .card__title {
+    font-family: monospace;
+  }
+
+  .card__text {
+    font-family: "Roboto Mono";
+  }
+}
+
+.grid__title {
+  color: $cream;
+}

@@ -1,0 +1,115 @@
+@media all and (min-width: 700px) {
+  .grid {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+    .card {
+      height: 100%;
+    }
+  }
+
+  .masonry .cards {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 1000px;
+    margin-left: -1rem;
+
+    .card {
+      margin: 0 0 1rem 1rem; /* Some gutter */
+      max-width: 48%;
+    }
+  }
+}
+
+@media all and (min-width: 900px) {
+  .container {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  .sectionHeading {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .nav {
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+
+  .homeLogo {
+    margin-right: 1rem;
+  }
+
+  .nav__items {
+    grid-template-columns: repeat(5, max-content);
+    position: initial;
+    background-color: transparent;
+    grid-gap: 2rem;
+    justify-content: space-around;
+    padding: 0;
+
+    a {
+      color: $white;
+      font-size: 1.5rem;
+      width: max-content;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+      color: $orange;
+    }
+  }
+
+  .grid {
+    .cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .masonry .cards {
+    max-height: 1010px;
+
+    .card {
+      max-width: 31%;
+    }
+  }
+}
+
+@media all and (min-width: 1260px) {
+  .masonry,
+  .grid {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .sectionHeading {
+    margin-bottom: 4rem;
+  }
+
+  .card__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .card__text {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .masonry .cards {
+    max-height: 850px;
+
+    .card {
+      max-width: 23%;
+    }
+  }
+}

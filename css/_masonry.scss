@@ -1,0 +1,31 @@
+.masonry {
+  overflow: hidden; // prevent white 'border' on hero from blur overlow trick
+  padding: 2rem 1rem 3rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: max-content;
+
+  .card {
+    background: $light__white;
+    margin-bottom: 1rem;
+  }
+
+  .card::last-child {
+    margin-bottom: 0;
+  }
+
+  .card__title {
+    font-family: "Roboto Mono";
+  }
+
+  .card__text {
+    font-family: monospace;
+    font-size: 1.25rem;
+  }
+}
+
+.masonry__title {
+  color: $brown;
+}

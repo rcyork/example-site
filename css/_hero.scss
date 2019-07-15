@@ -1,0 +1,40 @@
+.hero {
+  height: 400px;
+  overflow: hidden;
+  color: white;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+
+  .hero__bg {
+    transform: scale(1.1);
+    background-image: url("hero.jpg");
+    background-size: cover;
+    filter: blur(5px);
+    height: 100%;
+    background-position: center center;
+  }
+}
+
+.hero__content {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-content: center;
+}
+
+.hero__title {
+  font-family: "Permanent Marker";
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  text-transform: uppercase;
+  font-family: "Amatic SC";
+  font-size: 2rem;
+}
