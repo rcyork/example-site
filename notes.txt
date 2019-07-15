@@ -1,6 +1,0 @@
-components to have
-- sticky nav
-- hero
-- masonry layout with flexbox
-- grid of cards
-- footer
